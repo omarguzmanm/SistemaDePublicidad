@@ -24,3 +24,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('info', InfoController::class)->middleware('auth');
 
+Route::get('/premieres', [InfoController::class, 'show_premieres'])->name('premieres');
+
